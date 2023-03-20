@@ -1,5 +1,5 @@
 //
-//  AppExtensionBrowser.swift
+//  EXAppExtensionBrowserView.swift
 //  PhotoPicker
 //
 //  Created by Jinwoo Kim on 3/18/23.
@@ -8,7 +8,7 @@
 import SwiftUI
 import ExtensionKit
 
-struct AppExtensionBrowser: NSViewRepresentable {
+struct EXAppExtensionBrowserView: NSViewRepresentable {
     func makeNSView(context: Context) -> NSView {
         context.coordinator.appExtensionBrowserViewController.view
     }

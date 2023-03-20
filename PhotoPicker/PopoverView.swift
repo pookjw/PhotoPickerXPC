@@ -36,7 +36,7 @@ struct PopoverView<T: View>: NSViewRepresentable {
         private let popover: NSPopover = .init()
         private let isVisible: Binding<Bool>
         
-        init(isVisible: Binding<Bool>) {
+        fileprivate init(isVisible: Binding<Bool>) {
             self.isVisible = isVisible
             super.init()
             

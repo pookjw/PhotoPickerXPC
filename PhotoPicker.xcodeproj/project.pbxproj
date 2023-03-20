@@ -22,7 +22,9 @@
 		4FA229CA29C6043600BF7ACF /* ExtensionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA229C929C6043600BF7ACF /* ExtensionsView.swift */; };
 		4FA229CC29C6063A00BF7ACF /* ExtensionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA229CB29C6063A00BF7ACF /* ExtensionsViewModel.swift */; };
 		4FA229CE29C60A2400BF7ACF /* AppExtensionIdentity+Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA229CD29C60A2400BF7ACF /* AppExtensionIdentity+Identifiable.swift */; };
-		4FFFFB2829C5DE6500982201 /* AppExtensionBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFFFB2729C5DE6500982201 /* AppExtensionBrowser.swift */; };
+		4FC4EB0A29C86CC500566B36 /* ExtensionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC4EB0929C86CC500566B36 /* ExtensionDetailView.swift */; };
+		4FC4EB0C29C86DDF00566B36 /* EXHostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC4EB0B29C86DDF00566B36 /* EXHostView.swift */; };
+		4FFFFB2829C5DE6500982201 /* EXAppExtensionBrowserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFFFB2729C5DE6500982201 /* EXAppExtensionBrowserView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,7 +83,9 @@
 		4FA229C929C6043600BF7ACF /* ExtensionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionsView.swift; sourceTree = "<group>"; };
 		4FA229CB29C6063A00BF7ACF /* ExtensionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionsViewModel.swift; sourceTree = "<group>"; };
 		4FA229CD29C60A2400BF7ACF /* AppExtensionIdentity+Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppExtensionIdentity+Identifiable.swift"; sourceTree = "<group>"; };
-		4FFFFB2729C5DE6500982201 /* AppExtensionBrowser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppExtensionBrowser.swift; sourceTree = "<group>"; };
+		4FC4EB0929C86CC500566B36 /* ExtensionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDetailView.swift; sourceTree = "<group>"; };
+		4FC4EB0B29C86DDF00566B36 /* EXHostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXHostView.swift; sourceTree = "<group>"; };
+		4FFFFB2729C5DE6500982201 /* EXAppExtensionBrowserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXAppExtensionBrowserView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,8 +141,10 @@
 				4F75BEA929C5CAD300C1F12E /* ContentView.swift */,
 				4FA229C929C6043600BF7ACF /* ExtensionsView.swift */,
 				4FA229CB29C6063A00BF7ACF /* ExtensionsViewModel.swift */,
+				4FC4EB0929C86CC500566B36 /* ExtensionDetailView.swift */,
 				4F75BEC929C5CE7200C1F12E /* PopoverView.swift */,
-				4FFFFB2729C5DE6500982201 /* AppExtensionBrowser.swift */,
+				4FFFFB2729C5DE6500982201 /* EXAppExtensionBrowserView.swift */,
+				4FC4EB0B29C86DDF00566B36 /* EXHostView.swift */,
 				4FA229CD29C60A2400BF7ACF /* AppExtensionIdentity+Identifiable.swift */,
 				4F75BEAB29C5CAD400C1F12E /* Assets.xcassets */,
 				4F75BEB029C5CAD400C1F12E /* PhotoPicker.entitlements */,
@@ -328,9 +334,11 @@
 				4FA229CA29C6043600BF7ACF /* ExtensionsView.swift in Sources */,
 				4FA229CE29C60A2400BF7ACF /* AppExtensionIdentity+Identifiable.swift in Sources */,
 				4F75BEAA29C5CAD300C1F12E /* ContentView.swift in Sources */,
-				4FFFFB2829C5DE6500982201 /* AppExtensionBrowser.swift in Sources */,
+				4FFFFB2829C5DE6500982201 /* EXAppExtensionBrowserView.swift in Sources */,
 				4FA229CC29C6063A00BF7ACF /* ExtensionsViewModel.swift in Sources */,
 				4F75BEA829C5CAD300C1F12E /* PhotoPickerApp.swift in Sources */,
+				4FC4EB0C29C86DDF00566B36 /* EXHostView.swift in Sources */,
+				4FC4EB0A29C86CC500566B36 /* ExtensionDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

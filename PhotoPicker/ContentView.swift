@@ -6,25 +6,21 @@
 //
 
 import SwiftUI
+import ExtensionFoundation
 
 struct ContentView: View {
-    @State private var isVisible: Bool = false
+    @State private var selectedAppExtensionIdentity: AppExtensionIdentity?
     
     var body: some View {
         NavigationSplitView { 
-            ExtensionsView()
-        } detail: { 
-            Color.purple
+            ExtensionsView(selectedAppExtensionIdentity: $selectedAppExtensionIdentity)
+        } detail: {
+            if let selectedAppExtensionIdentity: AppExtensionIdentity {
+                ExtensionDetailView(appExtensionIdentity: selectedAppExtensionIdentity)
+            } else {
+                Color.purple
+            }
         }
-
-//        Button("Toggle") {
-//            isVisible = true
-//        }
-//        .background { 
-//            PopoverView(isVisible: $isVisible) {
-//                AppExtensionBrowser()
-//            }
-//        }
     }
 }
 

@@ -40,6 +40,9 @@ actor ExtensionsViewModel: ObservableObject {
                 }
             }
         }
-        
+    }
+    
+    @MainActor func identity(from id: AppExtensionIdentity.ID) -> AppExtensionIdentity? {
+        identities.first { $0.id == id }
     }
 }
