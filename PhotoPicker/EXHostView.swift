@@ -9,12 +9,18 @@ import SwiftUI
 import ExtensionKit
 
 struct EXHostView: NSViewRepresentable {
+    private let configuration: EXHostViewController.Configuration
+    
+    init(configuration: EXHostViewController.Configuration) {
+        self.configuration = configuration
+    }
+    
     func makeNSView(context: Context) -> NSView {
         context.coordinator.exHostViewController.view
     }
     
     func updateNSView(_ nsView: NSView, context: Context) {
-        // TODO
+        context.coordinator.configurationDidChange(configuration)
     }
     
     func makeCoordinator() -> Coordinator {
@@ -27,6 +33,10 @@ struct EXHostView: NSViewRepresentable {
         override init() {
             super.init()
             exHostViewController.delegate = self
+        }
+        
+        fileprivate func configurationDidChange(_ configuration: EXHostViewController.Configuration) {
+            exHostViewController.configuration = configuration
         }
     }
 }
