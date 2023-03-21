@@ -16,7 +16,14 @@ struct ContentView: View {
             ExtensionsView(selectedAppExtensionIdentity: $selectedAppExtensionIdentity)
         } detail: {
             if let selectedAppExtensionIdentity: AppExtensionIdentity {
-                ExtensionDetailView(appExtensionIdentity: selectedAppExtensionIdentity)
+                EXHostView(
+                    configuration: .init(
+                        appExtension: selectedAppExtensionIdentity,
+                        sceneID: "scene"
+                    )
+                ) { 
+                    Text("Pending...")
+                }
             } else {
                 Color.purple
             }

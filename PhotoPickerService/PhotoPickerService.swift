@@ -5,8 +5,8 @@
 //  Created by Jinwoo Kim on 3/18/23.
 //
 
-import Foundation
-import ExtensionFoundation
+import SwiftUI
+import ExtensionKit
 
 /// The AppExtensionConfiguration that will be provided by this extension.
 /// This is typically defined by the extension host in a framework.
@@ -20,7 +20,6 @@ struct ExampleConfiguration<E:PhotoPickerServiceExtension>: AppExtensionConfigur
     
     /// Determine whether to accept the XPC connection from the host.
     func accept(connection: NSXPCConnection) -> Bool {
-        // TODO: Configure the XPC connection and return true
         connection.activate()
         return true
     }
@@ -33,9 +32,20 @@ public protocol PhotoPickerServiceExtension : AppExtension {
 }
 
 extension PhotoPickerServiceExtension {
-    var configuration: ExampleConfiguration<some PhotoPickerServiceExtension> {
-        // Return your extension's configuration upon request.
-        return ExampleConfiguration(self)
+    var configuration: AppExtensionSceneConfiguration {
+        .init(
+            PrimitiveAppExtensionScene(
+                id: "scene", 
+                content: { 
+                    Text("BoraBora")
+                },
+                onConnection: { connection in
+                    connection.activate()
+                    return true
+                }
+            ), 
+            configuration: ExampleConfiguration(self)
+        )
     }
 }
 

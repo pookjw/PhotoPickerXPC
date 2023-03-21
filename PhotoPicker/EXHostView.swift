@@ -8,11 +8,16 @@
 import SwiftUI
 import ExtensionKit
 
-struct EXHostView: NSViewRepresentable {
+struct EXHostView<Placeholder: View>: NSViewRepresentable {
     private let configuration: EXHostViewController.Configuration
+    private let placeholder: () -> Placeholder
     
-    init(configuration: EXHostViewController.Configuration) {
+    init(
+        configuration: EXHostViewController.Configuration,
+        @ViewBuilder placeholder: @escaping () -> Placeholder
+    ) {
         self.configuration = configuration
+        self.placeholder = placeholder
     }
     
     func makeNSView(context: Context) -> NSView {
@@ -29,14 +34,36 @@ struct EXHostView: NSViewRepresentable {
     
     final class Coordinator: NSObject, EXHostViewControllerDelegate {
         fileprivate let exHostViewController: EXHostViewController = .init()
+        private weak var placeholderController: NSViewController?
         
-        override init() {
+        fileprivate override init() {
             super.init()
             exHostViewController.delegate = self
         }
         
         fileprivate func configurationDidChange(_ configuration: EXHostViewController.Configuration) {
             exHostViewController.configuration = configuration
+        }
+        
+        fileprivate func placeholderDidChange<Placeholder: View>(@ViewBuilder _ placeholder: () -> Placeholder) {
+            placeholderController?.removeFromParent()
+            placeholderController = nil
+            
+            let placeholderController: NSHostingController = .init(rootView: placeholder())
+            exHostViewController.addChild(placeholderController)
+            exHostViewController.placeholderView = placeholderController.view
+            
+            self.placeholderController = placeholderController
+        }
+        
+        func hostViewControllerDidActivate(_ viewController: EXHostViewController) {
+            
+        }
+        
+        func hostViewControllerWillDeactivate(_ viewController: EXHostViewController, error: Error?) {
+//            if let error: Error {
+//                fatalError(error.localizedDescription)
+//            }
         }
     }
 }

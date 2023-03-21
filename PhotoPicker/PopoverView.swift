@@ -24,7 +24,7 @@ struct PopoverView<T: View>: NSViewRepresentable {
     
     func updateNSView(_ nsView: NSView, context: Context) {
         context.coordinator.visibilityDidChange(isVisible, in: nsView)
-        context.coordinator.contentDidChange(content: content)
+        context.coordinator.contentDidChange(content)
     }
     
     func makeCoordinator() -> Coordinator {
@@ -56,7 +56,7 @@ struct PopoverView<T: View>: NSViewRepresentable {
             }
         }
         
-        fileprivate func contentDidChange<T: View>(@ViewBuilder content: () -> T) {
+        fileprivate func contentDidChange<T: View>(@ViewBuilder _ content: () -> T) {
             popover.contentViewController = NSHostingController(rootView: content())
         }
         
