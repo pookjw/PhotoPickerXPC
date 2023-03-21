@@ -10,7 +10,7 @@ import ExtensionKit
 import PhotoPickerCommon
 
 @main
-struct PhotoPickerService: PhotoPickerXPCExtension {
+struct PhotoPickerService: PhotoPickerServiceExtension {
     var configuration: AppExtensionSceneConfiguration {
         let configuration: PhotoPickerServiceConfiguration<Self> = .init(self)
         

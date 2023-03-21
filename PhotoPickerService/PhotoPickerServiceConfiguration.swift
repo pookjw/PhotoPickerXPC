@@ -9,7 +9,7 @@ import Foundation
 import ExtensionFoundation
 import PhotoPickerCommon
 
-actor PhotoPickerServiceConfiguration<E: PhotoPickerXPCExtension>: AppExtensionConfiguration {
+actor PhotoPickerServiceConfiguration<E: PhotoPickerServiceExtension>: AppExtensionConfiguration {
     private let appExtension: E
     private let serviceObject: any PhotoPickerServiceProtocol
     private var connection: NSXPCConnection?

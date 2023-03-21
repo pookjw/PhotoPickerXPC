@@ -20,7 +20,7 @@
 		4F7DB13829C9F7FD001E9FA5 /* PhotoPickerXPCService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7DB13729C9F7FD001E9FA5 /* PhotoPickerXPCService.swift */; };
 		4F7DB13A29C9F9D1001E9FA5 /* ExtensionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7DB13929C9F9D1001E9FA5 /* ExtensionDetailView.swift */; };
 		4F7DB13C29C9F9EF001E9FA5 /* ExtensionDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7DB13B29C9F9EF001E9FA5 /* ExtensionDetailViewModel.swift */; };
-		4F7DB14629CA0336001E9FA5 /* PhotoPickerXPCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7DB14529CA0336001E9FA5 /* PhotoPickerXPCExtension.swift */; };
+		4F7DB14629CA0336001E9FA5 /* PhotoPickerServiceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7DB14529CA0336001E9FA5 /* PhotoPickerServiceExtension.swift */; };
 		4F7DB14829CA034D001E9FA5 /* PhotoPickerServiceObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7DB14729CA034D001E9FA5 /* PhotoPickerServiceObject.swift */; };
 		4F7DB14A29CA0376001E9FA5 /* PhotoPickerServiceConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7DB14929CA0376001E9FA5 /* PhotoPickerServiceConfiguration.swift */; };
 		4FA2292729C5E91B00BF7ACF /* com.pookjw.PhotoPicker.Extension.appextensionpoint in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4F75BEC729C5CC2700C1F12E /* com.pookjw.PhotoPicker.Extension.appextensionpoint */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -90,7 +90,7 @@
 		4F7DB13729C9F7FD001E9FA5 /* PhotoPickerXPCService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerXPCService.swift; sourceTree = "<group>"; };
 		4F7DB13929C9F9D1001E9FA5 /* ExtensionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDetailView.swift; sourceTree = "<group>"; };
 		4F7DB13B29C9F9EF001E9FA5 /* ExtensionDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDetailViewModel.swift; sourceTree = "<group>"; };
-		4F7DB14529CA0336001E9FA5 /* PhotoPickerXPCExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerXPCExtension.swift; sourceTree = "<group>"; };
+		4F7DB14529CA0336001E9FA5 /* PhotoPickerServiceExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerServiceExtension.swift; sourceTree = "<group>"; };
 		4F7DB14729CA034D001E9FA5 /* PhotoPickerServiceObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerServiceObject.swift; sourceTree = "<group>"; };
 		4F7DB14929CA0376001E9FA5 /* PhotoPickerServiceConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerServiceConfiguration.swift; sourceTree = "<group>"; };
 		4FA229B629C6023C00BF7ACF /* PhotoPickerProvider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoPickerProvider.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -179,7 +179,7 @@
 		4F75BEBB29C5CBA700C1F12E /* PhotoPickerService */ = {
 			isa = PBXGroup;
 			children = (
-				4F7DB14529CA0336001E9FA5 /* PhotoPickerXPCExtension.swift */,
+				4F7DB14529CA0336001E9FA5 /* PhotoPickerServiceExtension.swift */,
 				4F7DB14729CA034D001E9FA5 /* PhotoPickerServiceObject.swift */,
 				4F7DB14929CA0376001E9FA5 /* PhotoPickerServiceConfiguration.swift */,
 				4F75BEBC29C5CBA700C1F12E /* PhotoPickerService.swift */,
@@ -452,7 +452,7 @@
 			files = (
 				4F7DB14829CA034D001E9FA5 /* PhotoPickerServiceObject.swift in Sources */,
 				4F7DB14A29CA0376001E9FA5 /* PhotoPickerServiceConfiguration.swift in Sources */,
-				4F7DB14629CA0336001E9FA5 /* PhotoPickerXPCExtension.swift in Sources */,
+				4F7DB14629CA0336001E9FA5 /* PhotoPickerServiceExtension.swift in Sources */,
 				4F75BEBD29C5CBA700C1F12E /* PhotoPickerService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

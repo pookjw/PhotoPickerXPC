@@ -9,9 +9,9 @@ import Foundation
 import PhotoPickerCommon
 
 actor PhotoPickerServiceObject: NSObject, PhotoPickerServiceProtocol {
-    let appExtension: any PhotoPickerXPCExtension
+    let appExtension: any PhotoPickerServiceExtension
     
-    init(appExtension: some PhotoPickerXPCExtension) {
+    init(appExtension: some PhotoPickerServiceExtension) {
         self.appExtension = appExtension
         super.init()
     }
