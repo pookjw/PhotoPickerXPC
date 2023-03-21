@@ -1,6 +1,6 @@
 # PhotoPickerXPC
 
-Photo Picker with ExtensionKit (WIP)
+Photo Picker with ExtensionKit
 
 Inspired by [insidegui/TextTransformer](https://github.com/insidegui/TextTransformer).
 
