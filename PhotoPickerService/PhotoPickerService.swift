@@ -7,51 +7,34 @@
 
 import SwiftUI
 import ExtensionKit
+import PhotoPickerCommon
 
-/// The AppExtensionConfiguration that will be provided by this extension.
-/// This is typically defined by the extension host in a framework.
-struct ExampleConfiguration<E:PhotoPickerServiceExtension>: AppExtensionConfiguration {
-    let appExtension: E
-    
-    init(_ appExtension: E) {
-        self.appExtension = appExtension
-    }
-    
-    /// Determine whether to accept the XPC connection from the host.
-    func accept(connection: NSXPCConnection) -> Bool {
-        connection.activate()
-        return true
-    }
-}
-
-/// The AppExtension protocol to which this extension will conform.
-/// This is typically defined by the extension host in a framework.
-public protocol PhotoPickerServiceExtension : AppExtension {
-    func transform(_ input: String) async -> String?
-}
-
-extension PhotoPickerServiceExtension {
+@main
+struct PhotoPickerService: PhotoPickerXPCExtension {
     var configuration: AppExtensionSceneConfiguration {
-        .init(
+        let configuration: PhotoPickerServiceConfiguration<Self> = .init(self)
+        
+        return .init(
             PrimitiveAppExtensionScene(
                 id: "scene", 
                 content: { 
-                    Text("BoraBora")
+                    Button("Send") { 
+                        Task {
+                            try! await configuration.sendSelectedLocalIdentifiers(["Test"])
+                        }
+                    }
                 },
                 onConnection: { connection in
                     connection.activate()
                     return true
                 }
             ), 
-            configuration: ExampleConfiguration(self)
+            configuration: configuration
         )
     }
-}
-
-@main
-struct PhotoPickerService: PhotoPickerServiceExtension {
-    func transform(_ input: String) async -> String? {
-        input.uppercased()
+    
+    func transform(_ input: String) async -> String {
+        "\(input) \(input)"
     }
     
     init() { }

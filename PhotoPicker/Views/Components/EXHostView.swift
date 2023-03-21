@@ -34,7 +34,7 @@ struct EXHostView<Placeholder: View>: NSViewRepresentable {
     
     final class Coordinator: NSObject, EXHostViewControllerDelegate {
         fileprivate let exHostViewController: EXHostViewController = .init()
-        private weak var placeholderController: NSViewController?
+        private var placeholderController: NSViewController?
         
         fileprivate override init() {
             super.init()
@@ -49,7 +49,8 @@ struct EXHostView<Placeholder: View>: NSViewRepresentable {
             placeholderController?.removeFromParent()
             placeholderController = nil
             
-            let placeholderController: NSHostingController = .init(rootView: placeholder())
+            let placeholder: Placeholder = placeholder()
+            let placeholderController: NSHostingController<Placeholder> = .init(rootView: placeholder)
             exHostViewController.addChild(placeholderController)
             exHostViewController.placeholderView = placeholderController.view
             
@@ -61,7 +62,9 @@ struct EXHostView<Placeholder: View>: NSViewRepresentable {
         }
         
         func hostViewControllerWillDeactivate(_ viewController: EXHostViewController, error: Error?) {
-            
+            if let error: Error {
+                fatalError(error.localizedDescription)
+            }
         }
     }
 }
