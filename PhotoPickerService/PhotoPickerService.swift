@@ -16,7 +16,7 @@ struct PhotoPickerService: PhotoPickerXPCExtension {
         
         return .init(
             PrimitiveAppExtensionScene(
-                id: "scene", 
+                id: sceneID, 
                 content: { 
                     Button("Send") { 
                         Task {

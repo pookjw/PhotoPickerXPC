@@ -7,6 +7,7 @@
 
 import SwiftUI
 import ExtensionFoundation
+import PhotoPickerCommon
 
 struct ExtensionDetailView: View {
     @ObservedObject private var viewModel: ExtensionDetailViewModel
@@ -20,7 +21,7 @@ struct ExtensionDetailView: View {
         EXHostView(
             configuration: .init(
                 appExtension: viewModel.appExtensionIdentity,
-                sceneID: "scene"
+                sceneID: sceneID
             )
         ) { 
             Text("Pending...")
