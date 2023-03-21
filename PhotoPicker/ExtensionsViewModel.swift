@@ -31,7 +31,7 @@ actor ExtensionsViewModel: ObservableObject {
             }
         }
         
-        let identitiesSteam: AppExtensionIdentity.Identities = try AppExtensionIdentity.matching(appExtensionPointIDs: "com.pookjw.PhotoPicker.extension")
+        let identitiesSteam: AppExtensionIdentity.Identities = try AppExtensionIdentity.matching(appExtensionPointIDs: "com.pookjw.PhotoPicker.Extension")
         
         identitiesTask = .init {
             for await identities in identitiesSteam {

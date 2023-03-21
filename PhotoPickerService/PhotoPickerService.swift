@@ -11,7 +11,6 @@ import ExtensionKit
 /// The AppExtensionConfiguration that will be provided by this extension.
 /// This is typically defined by the extension host in a framework.
 struct ExampleConfiguration<E:PhotoPickerServiceExtension>: AppExtensionConfiguration {
-    
     let appExtension: E
     
     init(_ appExtension: E) {
@@ -51,8 +50,6 @@ extension PhotoPickerServiceExtension {
 
 @main
 struct PhotoPickerService: PhotoPickerServiceExtension {
-    var configuration: ExampleConfiguration<PhotoPickerService> { ExampleConfiguration(self) }
-    
     func transform(_ input: String) async -> String? {
         input.uppercased()
     }

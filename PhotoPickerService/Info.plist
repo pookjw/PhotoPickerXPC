@@ -7,7 +7,7 @@
 		<key>EXExtensionPrincipalClass</key>
 		<string>$(PRODUCT_MODULE_NAME).PhotoPickerService</string>
 		<key>EXExtensionPointIdentifier</key>
-		<string>com.pookjw.PhotoPicker.extension</string>
+		<string>com.pookjw.PhotoPicker.Extension</string>
 	</dict>
 </dict>
 </plist>

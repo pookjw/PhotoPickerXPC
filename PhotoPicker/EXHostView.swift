@@ -61,9 +61,7 @@ struct EXHostView<Placeholder: View>: NSViewRepresentable {
         }
         
         func hostViewControllerWillDeactivate(_ viewController: EXHostViewController, error: Error?) {
-//            if let error: Error {
-//                fatalError(error.localizedDescription)
-//            }
+            
         }
     }
 }
