@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F2D5D5029CB4AE500308CA2 /* LazyLayoutScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2D5D4F29CB4AE500308CA2 /* LazyLayoutScrollView.swift */; };
+		4F2D5D7A29CB693700308CA2 /* StateColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2D5D7929CB693700308CA2 /* StateColor.swift */; };
 		4F3917A529C96B810056ED2B /* PhotoPickerCommon in Frameworks */ = {isa = PBXBuildFile; productRef = 4F3917A429C96B810056ED2B /* PhotoPickerCommon */; };
 		4F3917A729C96B890056ED2B /* PhotoPickerCommon in Frameworks */ = {isa = PBXBuildFile; productRef = 4F3917A629C96B890056ED2B /* PhotoPickerCommon */; };
 		4F45A77829CB006A00459656 /* PhotoPickerServiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F45A77729CB006A00459656 /* PhotoPickerServiceView.swift */; };
 		4F45A77B29CB05E100459656 /* SquaresLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F45A77A29CB05E100459656 /* SquaresLayout.swift */; };
 		4F45A77D29CB072200459656 /* SquaresLayoutCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F45A77C29CB072200459656 /* SquaresLayoutCache.swift */; };
-		4F45A78029CB1FBF00459656 /* SquaresLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F45A77A29CB05E100459656 /* SquaresLayout.swift */; };
-		4F45A78129CB1FBF00459656 /* SquaresLayoutCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F45A77C29CB072200459656 /* SquaresLayoutCache.swift */; };
 		4F4E4FC529C960EF0046FF10 /* NSObject+Foundation_IvarDescription.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4F4E4FC429C960EF0046FF10 /* NSObject+Foundation_IvarDescription.mm */; };
 		4F4E4FC829C968000046FF10 /* com.pookjw.PhotoPicker.Extension.appextensionpoint in Resources */ = {isa = PBXBuildFile; fileRef = 4F75BEC729C5CC2700C1F12E /* com.pookjw.PhotoPicker.Extension.appextensionpoint */; };
 		4F75BEA829C5CAD300C1F12E /* PhotoPickerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F75BEA729C5CAD300C1F12E /* PhotoPickerApp.swift */; };
@@ -76,6 +76,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4F2D5D4F29CB4AE500308CA2 /* LazyLayoutScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyLayoutScrollView.swift; sourceTree = "<group>"; };
+		4F2D5D7929CB693700308CA2 /* StateColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateColor.swift; sourceTree = "<group>"; };
 		4F45A77729CB006A00459656 /* PhotoPickerServiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerServiceView.swift; sourceTree = "<group>"; };
 		4F45A77A29CB05E100459656 /* SquaresLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquaresLayout.swift; sourceTree = "<group>"; };
 		4F45A77C29CB072200459656 /* SquaresLayoutCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquaresLayoutCache.swift; sourceTree = "<group>"; };
@@ -146,6 +148,8 @@
 			children = (
 				4F45A77729CB006A00459656 /* PhotoPickerServiceView.swift */,
 				4F45A77A29CB05E100459656 /* SquaresLayout.swift */,
+				4F2D5D4F29CB4AE500308CA2 /* LazyLayoutScrollView.swift */,
+				4F2D5D7929CB693700308CA2 /* StateColor.swift */,
 				4F45A77C29CB072200459656 /* SquaresLayoutCache.swift */,
 			);
 			path = Views;
@@ -459,11 +463,9 @@
 				4FA229CE29C60A2400BF7ACF /* AppExtensionIdentity+Identifiable.swift in Sources */,
 				4F75BEAA29C5CAD300C1F12E /* ContentView.swift in Sources */,
 				4FFFFB2829C5DE6500982201 /* EXAppExtensionBrowserView.swift in Sources */,
-				4F45A78029CB1FBF00459656 /* SquaresLayout.swift in Sources */,
 				4FA229CC29C6063A00BF7ACF /* ExtensionsViewModel.swift in Sources */,
 				4F75BEA829C5CAD300C1F12E /* PhotoPickerApp.swift in Sources */,
 				4FC4EB0C29C86DDF00566B36 /* EXHostView.swift in Sources */,
-				4F45A78129CB1FBF00459656 /* SquaresLayoutCache.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,9 +474,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F7DB14829CA034D001E9FA5 /* PhotoPickerServiceObject.swift in Sources */,
+				4F2D5D7A29CB693700308CA2 /* StateColor.swift in Sources */,
 				4F45A77829CB006A00459656 /* PhotoPickerServiceView.swift in Sources */,
 				4F45A77B29CB05E100459656 /* SquaresLayout.swift in Sources */,
 				4F7DB14A29CA0376001E9FA5 /* PhotoPickerServiceConfiguration.swift in Sources */,
+				4F2D5D5029CB4AE500308CA2 /* LazyLayoutScrollView.swift in Sources */,
 				4F7DB14629CA0336001E9FA5 /* PhotoPickerServiceExtension.swift in Sources */,
 				4F75BEBD29C5CBA700C1F12E /* PhotoPickerService.swift in Sources */,
 				4F45A77D29CB072200459656 /* SquaresLayoutCache.swift in Sources */,

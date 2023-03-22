@@ -103,3 +103,20 @@ struct SquaresLayout: Layout {
         return min((viewWidth / .init(column)), viewWidth)
     }
 }
+
+extension SquaresLayout: LazyLayoutScrollViewProtocol {
+    func isSubviewVisible(index: Int, frame: CGRect, safeAreaInsets: EdgeInsets) -> Bool {
+        let correctedFrame: CGRect = .init(
+            origin: .init(x: -frame.origin.x, y: -frame.origin.y),
+            size: frame.size
+        )
+        
+        let column: Int = column(viewWidth: correctedFrame.size.width)
+        let preferredItemLength: CGFloat = preferredItemLength(viewWidth: correctedFrame.size.width, column: column)
+        let row: Int = index / column
+        let yOffset: CGFloat = preferredItemLength * CGFloat(row) + preferredItemLength
+        let isVisible: Bool = (yOffset >= (correctedFrame.origin.y - safeAreaInsets.top)) && (yOffset <= (correctedFrame.origin.y + correctedFrame.size.height + preferredItemLength + safeAreaInsets.top - safeAreaInsets.bottom))
+        
+        return isVisible
+    }
+}
