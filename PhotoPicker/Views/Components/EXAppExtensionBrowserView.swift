@@ -25,6 +25,7 @@ struct EXAppExtensionBrowserView: NSViewRepresentable {
         .init(width: 400.0, height: 300.0)
     }
     
+    @MainActor
     final class Coordinator {
         fileprivate let appExtensionBrowserViewController: EXAppExtensionBrowserViewController = .init()
     }

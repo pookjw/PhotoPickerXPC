@@ -19,6 +19,17 @@ struct ContentView: View {
                 ExtensionDetailView(appExtensionIdentity: selectedAppExtensionIdentity)
             } else {
                 Color.purple
+//                ScrollView { 
+//                    SquaresLayout(maxItemLength: .constant(200)) {
+//                        ForEach(0..<1_000) { number in
+//                            Color(
+//                                red: Double.random(in: 0...1),
+//                                green: Double.random(in: 0...1),
+//                                blue: Double.random(in: 0...1)
+//                            )
+//                        }
+//                    }
+//                }
             }
         }
     }

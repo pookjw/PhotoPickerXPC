@@ -32,6 +32,7 @@ struct EXHostView<Placeholder: View>: NSViewRepresentable {
         .init()
     }
     
+    @MainActor
     final class Coordinator: NSObject, EXHostViewControllerDelegate {
         fileprivate let exHostViewController: EXHostViewController = .init()
         private var placeholderController: NSViewController?
@@ -57,11 +58,11 @@ struct EXHostView<Placeholder: View>: NSViewRepresentable {
             self.placeholderController = placeholderController
         }
         
-        func hostViewControllerDidActivate(_ viewController: EXHostViewController) {
+        nonisolated func hostViewControllerDidActivate(_ viewController: EXHostViewController) {
             
         }
         
-        func hostViewControllerWillDeactivate(_ viewController: EXHostViewController, error: Error?) {
+        nonisolated func hostViewControllerWillDeactivate(_ viewController: EXHostViewController, error: Error?) {
             if let error: Error {
                 fatalError(error.localizedDescription)
             }

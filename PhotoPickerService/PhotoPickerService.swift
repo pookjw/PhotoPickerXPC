@@ -18,11 +18,7 @@ struct PhotoPickerService: PhotoPickerServiceExtension {
             PrimitiveAppExtensionScene(
                 id: sceneID, 
                 content: { 
-                    Button("Send") { 
-                        Task {
-                            try! await configuration.sendSelectedLocalIdentifiers(["Test"])
-                        }
-                    }
+                    PhotoPickerServiceView(configuration: configuration)
                 },
                 onConnection: { connection in
                     connection.activate()
@@ -34,7 +30,7 @@ struct PhotoPickerService: PhotoPickerServiceExtension {
     }
     
     func transform(_ input: String) async -> String {
-        "\(input) \(input)"
+        "Pong"
     }
     
     init() { }

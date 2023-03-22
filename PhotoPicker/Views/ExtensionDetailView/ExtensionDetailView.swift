@@ -11,7 +11,7 @@ import PhotoPickerCommon
 
 struct ExtensionDetailView: View {
     @ObservedObject private var viewModel: ExtensionDetailViewModel
-    @State private var title: String = "Title"
+    @State private var title: String = "Ping"
     
     init(appExtensionIdentity: AppExtensionIdentity) {
         self.viewModel = try! .init(appExtensionIdentity: appExtensionIdentity)
