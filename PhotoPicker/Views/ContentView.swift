@@ -18,6 +18,7 @@ struct ContentView: View {
             if let selectedAppExtensionIdentity: AppExtensionIdentity {
                 ExtensionDetailView(appExtensionIdentity: selectedAppExtensionIdentity)
             } else {
+                // TODO: https://developer.apple.com/documentation/swiftui/griditem
                 Color.purple
             }
         }
