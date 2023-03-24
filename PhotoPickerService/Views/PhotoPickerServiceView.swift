@@ -6,36 +6,59 @@
 //
 
 import SwiftUI
+import Photos
 
-struct PhotoPickerServiceView<E: PhotoPickerServiceExtension>: View {
+struct PhotoPickerServiceView<E: PhotoPickerServiceExtension>: NSViewRepresentable {
     private let configuration: PhotoPickerServiceConfiguration<E>
     
     init(configuration: PhotoPickerServiceConfiguration<E>) {
         self.configuration = configuration
     }
     
-    var body: some View {
-        ScrollView { 
-            LazyVGrid(
-                columns: [
-                    .init(
-                        .adaptive(minimum: 150.0),
-                        spacing: .zero,
-                        alignment: .leading
-                    )
-                ],
-                alignment: .leading,
-                spacing: .zero
-            ) { 
-                ForEach(0..<3_000) { index in
-                    Color(
-                        red: .random(in: .zero...1.0),
-                        green: .random(in: .zero...1.0), 
-                        blue: .random(in: .zero...1.0)
-                    )
-                    .aspectRatio(1.0, contentMode: .fit)
+    func makeNSView(context: Context) -> NSView {
+        context.coordinator.viewController.view
+    }
+    
+    func updateNSView(_ nsView: NSView, context: Context) {
+        context.coordinator.configuration = configuration
+    }
+    
+    func makeCoordinator() -> Coordinator<E> {
+        .init(configuration: configuration)
+    }
+    
+    @MainActor
+    final class Coordinator<E: PhotoPickerServiceExtension> {
+        var configuration: PhotoPickerServiceConfiguration<E>
+        private var task: Task<Void, Never>?
+        
+        let viewController: PhotoPickerViewController = .init()
+        
+        init(configuration: PhotoPickerServiceConfiguration<E>) {
+            self.configuration = configuration
+            
+            let notifications: NotificationCenter.Notifications = NotificationCenter.default.notifications(named: .photoPickerViewControllerDidSelectAssets, object: viewController)
+            
+            task = .detached { [weak self] in
+                for await notification in notifications {
+                    guard 
+                        let configuration: PhotoPickerServiceConfiguration<E> = await MainActor.run(body: { [weak self] in
+                            self?.configuration
+                        }),
+                        let assets: [PHAsset] = notification.userInfo?[PhotoPickerViewControllerSelectedAssetsKey] as? [PHAsset]
+                    else {
+                        continue
+                    }
+                    
+                    let identifiers: [String] = assets
+                        .map { $0.localIdentifier }
+                    try! await configuration.sendSelectedLocalIdentifiers(identifiers)
                 }
             }
+        }
+        
+        deinit {
+            task?.cancel()
         }
     }
 }

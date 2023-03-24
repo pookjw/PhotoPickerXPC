@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F1CB43229CDB02000D2CFC1 /* PhotoPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F1CB43129CDB02000D2CFC1 /* PhotoPickerViewController.m */; };
+		4F1CB43429CDB60200D2CFC1 /* PhotoPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F1CB43129CDB02000D2CFC1 /* PhotoPickerViewController.m */; };
+		4F1CB43629CDB60F00D2CFC1 /* _PhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1CB43529CDB60F00D2CFC1 /* _PhotoPickerView.swift */; };
+		4F1CB43929CDB82D00D2CFC1 /* PhotoPickerViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F1CB43829CDB82D00D2CFC1 /* PhotoPickerViewModel.m */; };
+		4F1CB43C29CDBE2900D2CFC1 /* PhotoPickerCollectionViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F1CB43B29CDBE2900D2CFC1 /* PhotoPickerCollectionViewItem.m */; };
+		4F1CB43F29CDBEA400D2CFC1 /* PhotoPickerSectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F1CB43E29CDBEA400D2CFC1 /* PhotoPickerSectionModel.m */; };
+		4F1CB44029CDBF9700D2CFC1 /* PhotoPickerCollectionViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F1CB43B29CDBE2900D2CFC1 /* PhotoPickerCollectionViewItem.m */; };
+		4F1CB44129CDBF9700D2CFC1 /* PhotoPickerViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F1CB43829CDB82D00D2CFC1 /* PhotoPickerViewModel.m */; };
+		4F1CB44529CDBFA700D2CFC1 /* PhotoPickerItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F1CB44429CDBFA700D2CFC1 /* PhotoPickerItemModel.m */; };
+		4F1CB44829CDC06A00D2CFC1 /* NSObject+Foundation_IvarDescription.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4F1CB44629CDC06A00D2CFC1 /* NSObject+Foundation_IvarDescription.mm */; };
+		4F1CB44A29CDC0EE00D2CFC1 /* PhotoPickerSectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F1CB43E29CDBEA400D2CFC1 /* PhotoPickerSectionModel.m */; };
+		4F1CB44B29CDC0EE00D2CFC1 /* PhotoPickerItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F1CB44429CDBFA700D2CFC1 /* PhotoPickerItemModel.m */; };
+		4F1CB45129CDC56500D2CFC1 /* NSCollectionViewDiffableDataSource+ApplySnapshotAndWait.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F1CB45029CDC56500D2CFC1 /* NSCollectionViewDiffableDataSource+ApplySnapshotAndWait.m */; };
+		4F1CB45229CDC56D00D2CFC1 /* NSCollectionViewDiffableDataSource+ApplySnapshotAndWait.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F1CB45029CDC56500D2CFC1 /* NSCollectionViewDiffableDataSource+ApplySnapshotAndWait.m */; };
 		4F3917A529C96B810056ED2B /* PhotoPickerCommon in Frameworks */ = {isa = PBXBuildFile; productRef = 4F3917A429C96B810056ED2B /* PhotoPickerCommon */; };
 		4F3917A729C96B890056ED2B /* PhotoPickerCommon in Frameworks */ = {isa = PBXBuildFile; productRef = 4F3917A629C96B890056ED2B /* PhotoPickerCommon */; };
 		4F45A77829CB006A00459656 /* PhotoPickerServiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F45A77729CB006A00459656 /* PhotoPickerServiceView.swift */; };
@@ -71,6 +85,23 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4F1CB42D29CDB00600D2CFC1 /* PhotoPickerService-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PhotoPickerService-Bridging-Header.h"; sourceTree = "<group>"; };
+		4F1CB43029CDB02000D2CFC1 /* PhotoPickerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoPickerViewController.h; sourceTree = "<group>"; };
+		4F1CB43129CDB02000D2CFC1 /* PhotoPickerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoPickerViewController.m; sourceTree = "<group>"; };
+		4F1CB43529CDB60F00D2CFC1 /* _PhotoPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _PhotoPickerView.swift; sourceTree = "<group>"; };
+		4F1CB43729CDB82D00D2CFC1 /* PhotoPickerViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoPickerViewModel.h; sourceTree = "<group>"; };
+		4F1CB43829CDB82D00D2CFC1 /* PhotoPickerViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoPickerViewModel.m; sourceTree = "<group>"; };
+		4F1CB43A29CDBE2900D2CFC1 /* PhotoPickerCollectionViewItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoPickerCollectionViewItem.h; sourceTree = "<group>"; };
+		4F1CB43B29CDBE2900D2CFC1 /* PhotoPickerCollectionViewItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoPickerCollectionViewItem.m; sourceTree = "<group>"; };
+		4F1CB43D29CDBEA400D2CFC1 /* PhotoPickerSectionModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoPickerSectionModel.h; sourceTree = "<group>"; };
+		4F1CB43E29CDBEA400D2CFC1 /* PhotoPickerSectionModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoPickerSectionModel.m; sourceTree = "<group>"; };
+		4F1CB44329CDBFA700D2CFC1 /* PhotoPickerItemModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoPickerItemModel.h; sourceTree = "<group>"; };
+		4F1CB44429CDBFA700D2CFC1 /* PhotoPickerItemModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoPickerItemModel.m; sourceTree = "<group>"; };
+		4F1CB44629CDC06A00D2CFC1 /* NSObject+Foundation_IvarDescription.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "NSObject+Foundation_IvarDescription.mm"; sourceTree = "<group>"; };
+		4F1CB44729CDC06A00D2CFC1 /* NSObject+Foundation_IvarDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Foundation_IvarDescription.h"; sourceTree = "<group>"; };
+		4F1CB44E29CDC53900D2CFC1 /* NSCollectionViewDiffableDataSource+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSCollectionViewDiffableDataSource+Private.h"; sourceTree = "<group>"; };
+		4F1CB44F29CDC55300D2CFC1 /* NSCollectionViewDiffableDataSource+ApplySnapshotAndWait.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSCollectionViewDiffableDataSource+ApplySnapshotAndWait.h"; sourceTree = "<group>"; };
+		4F1CB45029CDC56500D2CFC1 /* NSCollectionViewDiffableDataSource+ApplySnapshotAndWait.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSCollectionViewDiffableDataSource+ApplySnapshotAndWait.m"; sourceTree = "<group>"; };
 		4F45A77729CB006A00459656 /* PhotoPickerServiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerServiceView.swift; sourceTree = "<group>"; };
 		4F4E4FC229C960EE0046FF10 /* PhotoPicker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PhotoPicker-Bridging-Header.h"; sourceTree = "<group>"; };
 		4F4E4FC929C9696A0046FF10 /* PhotoPickerCommon */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = PhotoPickerCommon; sourceTree = "<group>"; };
@@ -132,10 +163,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F1CB44D29CDC53100D2CFC1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4F1CB44E29CDC53900D2CFC1 /* NSCollectionViewDiffableDataSource+Private.h */,
+				4F1CB44F29CDC55300D2CFC1 /* NSCollectionViewDiffableDataSource+ApplySnapshotAndWait.h */,
+				4F1CB45029CDC56500D2CFC1 /* NSCollectionViewDiffableDataSource+ApplySnapshotAndWait.m */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		4F45A77929CB04C700459656 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				4F45A77729CB006A00459656 /* PhotoPickerServiceView.swift */,
+				4F1CB43029CDB02000D2CFC1 /* PhotoPickerViewController.h */,
+				4F1CB43129CDB02000D2CFC1 /* PhotoPickerViewController.m */,
+				4F1CB43729CDB82D00D2CFC1 /* PhotoPickerViewModel.h */,
+				4F1CB43829CDB82D00D2CFC1 /* PhotoPickerViewModel.m */,
+				4F1CB43D29CDBEA400D2CFC1 /* PhotoPickerSectionModel.h */,
+				4F1CB43E29CDBEA400D2CFC1 /* PhotoPickerSectionModel.m */,
+				4F1CB44329CDBFA700D2CFC1 /* PhotoPickerItemModel.h */,
+				4F1CB44429CDBFA700D2CFC1 /* PhotoPickerItemModel.m */,
+				4F1CB43A29CDBE2900D2CFC1 /* PhotoPickerCollectionViewItem.h */,
+				4F1CB43B29CDBE2900D2CFC1 /* PhotoPickerCollectionViewItem.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -186,6 +237,7 @@
 		4F75BEBB29C5CBA700C1F12E /* PhotoPickerService */ = {
 			isa = PBXGroup;
 			children = (
+				4F1CB44D29CDC53100D2CFC1 /* Extensions */,
 				4F45A77929CB04C700459656 /* Views */,
 				4F7DB14529CA0336001E9FA5 /* PhotoPickerServiceExtension.swift */,
 				4F7DB14729CA034D001E9FA5 /* PhotoPickerServiceObject.swift */,
@@ -193,6 +245,7 @@
 				4F75BEBC29C5CBA700C1F12E /* PhotoPickerService.swift */,
 				4F75BEBE29C5CBA700C1F12E /* Info.plist */,
 				4F75BEBF29C5CBA700C1F12E /* PhotoPickerService.entitlements */,
+				4F1CB42D29CDB00600D2CFC1 /* PhotoPickerService-Bridging-Header.h */,
 			);
 			path = PhotoPickerService;
 			sourceTree = "<group>";
@@ -228,6 +281,8 @@
 		4F7DB14029CA02AE001E9FA5 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				4F1CB44729CDC06A00D2CFC1 /* NSObject+Foundation_IvarDescription.h */,
+				4F1CB44629CDC06A00D2CFC1 /* NSObject+Foundation_IvarDescription.mm */,
 				4FA229CD29C60A2400BF7ACF /* AppExtensionIdentity+Identifiable.swift */,
 			);
 			path = Extensions;
@@ -255,6 +310,7 @@
 			isa = PBXGroup;
 			children = (
 				4F75BEA929C5CAD300C1F12E /* ContentView.swift */,
+				4F1CB43529CDB60F00D2CFC1 /* _PhotoPickerView.swift */,
 				4F7DB13F29CA02A5001E9FA5 /* Components */,
 				4F7DB13D29CA0292001E9FA5 /* ExtensionsView */,
 				4F7DB13E29CA029B001E9FA5 /* ExtensionDetailView */,
@@ -377,6 +433,7 @@
 					};
 					4F75BEB929C5CBA700C1F12E = {
 						CreatedOnToolsVersion = 14.3;
+						LastSwiftMigration = 1430;
 					};
 					4FA229B529C6023C00BF7ACF = {
 						CreatedOnToolsVersion = 14.3;
@@ -438,16 +495,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F75BECA29C5CE7200C1F12E /* PopoverView.swift in Sources */,
+				4F1CB43429CDB60200D2CFC1 /* PhotoPickerViewController.m in Sources */,
 				4F7DB13A29C9F9D1001E9FA5 /* ExtensionDetailView.swift in Sources */,
+				4F1CB45229CDC56D00D2CFC1 /* NSCollectionViewDiffableDataSource+ApplySnapshotAndWait.m in Sources */,
 				4F7DB13829C9F7FD001E9FA5 /* PhotoPickerXPCService.swift in Sources */,
 				4FA229CA29C6043600BF7ACF /* ExtensionsView.swift in Sources */,
 				4F7DB13C29C9F9EF001E9FA5 /* ExtensionDetailViewModel.swift in Sources */,
 				4FA229CE29C60A2400BF7ACF /* AppExtensionIdentity+Identifiable.swift in Sources */,
+				4F1CB44129CDBF9700D2CFC1 /* PhotoPickerViewModel.m in Sources */,
+				4F1CB44829CDC06A00D2CFC1 /* NSObject+Foundation_IvarDescription.mm in Sources */,
 				4F75BEAA29C5CAD300C1F12E /* ContentView.swift in Sources */,
+				4F1CB44029CDBF9700D2CFC1 /* PhotoPickerCollectionViewItem.m in Sources */,
 				4FFFFB2829C5DE6500982201 /* EXAppExtensionBrowserView.swift in Sources */,
+				4F1CB43629CDB60F00D2CFC1 /* _PhotoPickerView.swift in Sources */,
 				4FA229CC29C6063A00BF7ACF /* ExtensionsViewModel.swift in Sources */,
+				4F1CB44A29CDC0EE00D2CFC1 /* PhotoPickerSectionModel.m in Sources */,
 				4F75BEA829C5CAD300C1F12E /* PhotoPickerApp.swift in Sources */,
 				4FC4EB0C29C86DDF00566B36 /* EXHostView.swift in Sources */,
+				4F1CB44B29CDC0EE00D2CFC1 /* PhotoPickerItemModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,11 +520,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F1CB43C29CDBE2900D2CFC1 /* PhotoPickerCollectionViewItem.m in Sources */,
+				4F1CB45129CDC56500D2CFC1 /* NSCollectionViewDiffableDataSource+ApplySnapshotAndWait.m in Sources */,
+				4F1CB43929CDB82D00D2CFC1 /* PhotoPickerViewModel.m in Sources */,
 				4F7DB14829CA034D001E9FA5 /* PhotoPickerServiceObject.swift in Sources */,
+				4F1CB43F29CDBEA400D2CFC1 /* PhotoPickerSectionModel.m in Sources */,
+				4F1CB43229CDB02000D2CFC1 /* PhotoPickerViewController.m in Sources */,
 				4F45A77829CB006A00459656 /* PhotoPickerServiceView.swift in Sources */,
 				4F7DB14A29CA0376001E9FA5 /* PhotoPickerServiceConfiguration.swift in Sources */,
 				4F7DB14629CA0336001E9FA5 /* PhotoPickerServiceExtension.swift in Sources */,
 				4F75BEBD29C5CBA700C1F12E /* PhotoPickerService.swift in Sources */,
+				4F1CB44529CDBFA700D2CFC1 /* PhotoPickerItemModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,8 +562,8 @@
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
@@ -552,8 +623,8 @@
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
@@ -660,6 +731,7 @@
 		4F75BEC429C5CBA700C1F12E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = PhotoPickerService/PhotoPickerService.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -680,6 +752,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "PhotoPickerService/PhotoPickerService-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -687,6 +761,7 @@
 		4F75BEC529C5CBA700C1F12E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = PhotoPickerService/PhotoPickerService.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -707,6 +782,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "PhotoPickerService/PhotoPickerService-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
