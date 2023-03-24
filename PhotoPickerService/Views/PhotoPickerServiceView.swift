@@ -15,13 +15,26 @@ struct PhotoPickerServiceView<E: PhotoPickerServiceExtension>: View {
     }
     
     var body: some View {
-        LazyLayoutScrollView(data: 0..<1_000) {
-            SquaresLayout(maxItemLength: .constant(150))
-        } content: { index, isVisible in
-            if isVisible {
-                StateColor()
-            } else {
-                Color.clear
+        ScrollView { 
+            LazyVGrid(
+                columns: [
+                    .init(
+                        .adaptive(minimum: 150.0),
+                        spacing: .zero,
+                        alignment: .leading
+                    )
+                ],
+                alignment: .leading,
+                spacing: .zero
+            ) { 
+                ForEach(0..<3_000) { index in
+                    Color(
+                        red: .random(in: .zero...1.0),
+                        green: .random(in: .zero...1.0), 
+                        blue: .random(in: .zero...1.0)
+                    )
+                    .aspectRatio(1.0, contentMode: .fit)
+                }
             }
         }
     }

@@ -7,14 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4F2D5D5029CB4AE500308CA2 /* LazyLayoutScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2D5D4F29CB4AE500308CA2 /* LazyLayoutScrollView.swift */; };
-		4F2D5D7A29CB693700308CA2 /* StateColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2D5D7929CB693700308CA2 /* StateColor.swift */; };
 		4F3917A529C96B810056ED2B /* PhotoPickerCommon in Frameworks */ = {isa = PBXBuildFile; productRef = 4F3917A429C96B810056ED2B /* PhotoPickerCommon */; };
 		4F3917A729C96B890056ED2B /* PhotoPickerCommon in Frameworks */ = {isa = PBXBuildFile; productRef = 4F3917A629C96B890056ED2B /* PhotoPickerCommon */; };
 		4F45A77829CB006A00459656 /* PhotoPickerServiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F45A77729CB006A00459656 /* PhotoPickerServiceView.swift */; };
-		4F45A77B29CB05E100459656 /* SquaresLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F45A77A29CB05E100459656 /* SquaresLayout.swift */; };
-		4F45A77D29CB072200459656 /* SquaresLayoutCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F45A77C29CB072200459656 /* SquaresLayoutCache.swift */; };
-		4F4E4FC529C960EF0046FF10 /* NSObject+Foundation_IvarDescription.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4F4E4FC429C960EF0046FF10 /* NSObject+Foundation_IvarDescription.mm */; };
 		4F4E4FC829C968000046FF10 /* com.pookjw.PhotoPicker.Extension.appextensionpoint in Resources */ = {isa = PBXBuildFile; fileRef = 4F75BEC729C5CC2700C1F12E /* com.pookjw.PhotoPicker.Extension.appextensionpoint */; };
 		4F75BEA829C5CAD300C1F12E /* PhotoPickerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F75BEA729C5CAD300C1F12E /* PhotoPickerApp.swift */; };
 		4F75BEAA29C5CAD300C1F12E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F75BEA929C5CAD300C1F12E /* ContentView.swift */; };
@@ -76,14 +71,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		4F2D5D4F29CB4AE500308CA2 /* LazyLayoutScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyLayoutScrollView.swift; sourceTree = "<group>"; };
-		4F2D5D7929CB693700308CA2 /* StateColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateColor.swift; sourceTree = "<group>"; };
 		4F45A77729CB006A00459656 /* PhotoPickerServiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerServiceView.swift; sourceTree = "<group>"; };
-		4F45A77A29CB05E100459656 /* SquaresLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquaresLayout.swift; sourceTree = "<group>"; };
-		4F45A77C29CB072200459656 /* SquaresLayoutCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquaresLayoutCache.swift; sourceTree = "<group>"; };
 		4F4E4FC229C960EE0046FF10 /* PhotoPicker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PhotoPicker-Bridging-Header.h"; sourceTree = "<group>"; };
-		4F4E4FC329C960EF0046FF10 /* NSObject+Foundation_IvarDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Foundation_IvarDescription.h"; sourceTree = "<group>"; };
-		4F4E4FC429C960EF0046FF10 /* NSObject+Foundation_IvarDescription.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "NSObject+Foundation_IvarDescription.mm"; sourceTree = "<group>"; };
 		4F4E4FC929C9696A0046FF10 /* PhotoPickerCommon */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = PhotoPickerCommon; sourceTree = "<group>"; };
 		4F75BEA429C5CAD300C1F12E /* PhotoPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F75BEA729C5CAD300C1F12E /* PhotoPickerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerApp.swift; sourceTree = "<group>"; };
@@ -147,10 +136,6 @@
 			isa = PBXGroup;
 			children = (
 				4F45A77729CB006A00459656 /* PhotoPickerServiceView.swift */,
-				4F45A77A29CB05E100459656 /* SquaresLayout.swift */,
-				4F2D5D4F29CB4AE500308CA2 /* LazyLayoutScrollView.swift */,
-				4F2D5D7929CB693700308CA2 /* StateColor.swift */,
-				4F45A77C29CB072200459656 /* SquaresLayoutCache.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -243,8 +228,6 @@
 		4F7DB14029CA02AE001E9FA5 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				4F4E4FC329C960EF0046FF10 /* NSObject+Foundation_IvarDescription.h */,
-				4F4E4FC429C960EF0046FF10 /* NSObject+Foundation_IvarDescription.mm */,
 				4FA229CD29C60A2400BF7ACF /* AppExtensionIdentity+Identifiable.swift */,
 			);
 			path = Extensions;
@@ -455,7 +438,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F75BECA29C5CE7200C1F12E /* PopoverView.swift in Sources */,
-				4F4E4FC529C960EF0046FF10 /* NSObject+Foundation_IvarDescription.mm in Sources */,
 				4F7DB13A29C9F9D1001E9FA5 /* ExtensionDetailView.swift in Sources */,
 				4F7DB13829C9F7FD001E9FA5 /* PhotoPickerXPCService.swift in Sources */,
 				4FA229CA29C6043600BF7ACF /* ExtensionsView.swift in Sources */,
@@ -474,14 +456,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F7DB14829CA034D001E9FA5 /* PhotoPickerServiceObject.swift in Sources */,
-				4F2D5D7A29CB693700308CA2 /* StateColor.swift in Sources */,
 				4F45A77829CB006A00459656 /* PhotoPickerServiceView.swift in Sources */,
-				4F45A77B29CB05E100459656 /* SquaresLayout.swift in Sources */,
 				4F7DB14A29CA0376001E9FA5 /* PhotoPickerServiceConfiguration.swift in Sources */,
-				4F2D5D5029CB4AE500308CA2 /* LazyLayoutScrollView.swift in Sources */,
 				4F7DB14629CA0336001E9FA5 /* PhotoPickerServiceExtension.swift in Sources */,
 				4F75BEBD29C5CBA700C1F12E /* PhotoPickerService.swift in Sources */,
-				4F45A77D29CB072200459656 /* SquaresLayoutCache.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
