@@ -39,9 +39,14 @@
     [self setupScrollView];
     [self setupCollectionView];
     [self setupViewModel];
-    [self.viewModel loadDataSourceWithError:nil]; // TOOD: Error Handling
-    
-    [PHAsset new];
+    [self.viewModel loadDataSourceWithCompletion:^(NSError * _Nullable error) {
+        if (error) {
+            [NSNotificationCenter.defaultCenter postNotificationName:NSNotificationNamePhotoPickerViewControllerErrorOccured
+                                                              object:self
+                                                            userInfo:@{PhotoPickerViewControllerErrorOccuredKey: error}
+            ];
+        }
+    }];
 }
 
 - (void)setupScrollView {

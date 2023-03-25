@@ -4,10 +4,10 @@
 <dict>
 	<key>EXAppExtensionAttributes</key>
 	<dict>
-		<key>EXExtensionPrincipalClass</key>
-		<string>$(PRODUCT_MODULE_NAME).PhotoPickerService</string>
 		<key>EXExtensionPointIdentifier</key>
 		<string>com.pookjw.PhotoPicker.Extension</string>
+		<key>EXExtensionPrincipalClass</key>
+		<string>$(PRODUCT_MODULE_NAME).PhotoPickerService</string>
 	</dict>
 </dict>
 </plist>

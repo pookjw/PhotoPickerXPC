@@ -42,6 +42,14 @@ actor PhotoPickerServiceConfiguration<E: PhotoPickerServiceExtension>: AppExtens
         await remoteObject.selectedLocalIdentifiers(localIdentifiers)
     }
     
+    func errorOccured(error: Error) async throws {
+        guard let remoteObject: any PhotoPickerAppProtocol = try await connection?._remoteObject() else {
+            return
+        }
+        
+        remoteObject.errorOccured(error: error)
+    }
+    
     private func setConnection(_ connection: NSXPCConnection?) {
         self.connection = connection
     }

@@ -8,7 +8,7 @@ extension NSXPCConnection {
                     continuation.resume(with: .failure(error))
                 }) as? T
             else {
-                fatalError()
+                return
             }
             
             continuation.resume(with: .success(remoteObject))

@@ -44,8 +44,6 @@ void (^requestAuthorization)(void (^completion)(NSError * _Nullable)) = ^(void (
         [self setupQueue];
     }
     
-    int e = NSBundleErrorMinimum;
-    
     return self;
 }
 
@@ -55,18 +53,39 @@ void (^requestAuthorization)(void (^completion)(NSError * _Nullable)) = ^(void (
     [super dealloc];
 }
 
-- (void)loadDataSourceWithError:(NSError * __autoreleasing _Nullable *)error {
+- (void)loadDataSourceWithCompletion:(void (^ _Nullable)(NSError * __autoreleasing _Nullable error))completion {
     PhotoPickerDataSource *dataSource = self.dataSource;
     
     dispatch_async(self.queue, ^{
         dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
         
-        requestAuthorization(^(NSError * _Nullable error) {
+        __block NSError * _Nullable error = nil;
+        
+        requestAuthorization(^(NSError * _Nullable _error) {
+            error = [_error copy];
             dispatch_semaphore_signal(semaphore);
         });
         
         dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
         dispatch_release(semaphore);
+        
+        if (error) {
+            completion([error autorelease]);
+            return;
+        }
+        
+        [error release];
+        
+        //
+        
+        PHFetchOptions *options = [PHFetchOptions new];
+        NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"creationDate" ascending:NO];
+        options.sortDescriptors = @[sortDescriptor];
+        [sortDescriptor release];
+        PHFetchResult<PHAsset *> *assets = [PHAsset fetchAssetsWithOptions:options];
+        [options release];
+        
+        //
         
         PhotoPickerDataSourceSnapshot *snapshot = [PhotoPickerDataSourceSnapshot new];
         
@@ -74,20 +93,18 @@ void (^requestAuthorization)(void (^completion)(NSError * _Nullable)) = ^(void (
         
         [snapshot appendSectionsWithIdentifiers:@[sectionModel]];
         
-        for (NSUInteger i = 0; i < 3000; i++) {
-            NSAutoreleasePool *pool = [NSAutoreleasePool new];
-            
-            PhotoPickerItemModel *itemModel = [[PhotoPickerItemModel alloc] initWithAsset:nil];
+        [assets enumerateObjectsUsingBlock:^(PHAsset * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            PhotoPickerItemModel *itemModel = [[PhotoPickerItemModel alloc] initWithAsset:obj];
             [snapshot appendItemsWithIdentifiers:@[itemModel] intoSectionWithIdentifier:sectionModel];
             [itemModel release];
-            
-            [pool release];
-        }
+        }];
         
         [sectionModel release];
         
         [dataSource applySnapshotAndWait:snapshot animatingDifferences:YES];
         [snapshot release];
+        
+        completion(nil);
     });
 }
 

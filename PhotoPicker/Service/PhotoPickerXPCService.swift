@@ -36,4 +36,8 @@ actor PhotoPickerXPCService: NSObject, PhotoPickerAppProtocol {
     func selectedLocalIdentifiers(_ localIdentifiers: [String]) async {
         print(localIdentifiers)
     }
+    
+    nonisolated func errorOccured(error: Error) {
+        fatalError("\(error as NSError)")
+    }
 }

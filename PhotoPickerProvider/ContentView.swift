@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Photos
 
 struct ContentView: View {
     var body: some View {
@@ -16,6 +17,13 @@ struct ContentView: View {
             Text("Hello, world!")
         }
         .padding()
+        .onAppear {
+            PHPhotoLibrary.requestAuthorization(for: .readWrite) { status in
+                if status != .authorized {
+                    fatalError("\(status)")
+                }
+            }
+        }
     }
 }
 

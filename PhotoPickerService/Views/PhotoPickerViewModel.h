@@ -17,7 +17,7 @@ typedef NSCollectionViewDiffableDataSource<PhotoPickerSectionModel *, PhotoPicke
 + (instancetype)new NS_UNAVAILABLE;
 - (instancetype)init NS_UNAVAILABLE;
 - (instancetype)initWithDataSource:(PhotoPickerDataSource *)dataSource;
-- (void)loadDataSourceWithError:(NSError * __autoreleasing _Nullable *)error;
+- (void)loadDataSourceWithCompletion:(void (^ _Nullable)(NSError * __autoreleasing _Nullable error))completion;
 @end
 
 NS_ASSUME_NONNULL_END

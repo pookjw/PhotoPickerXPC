@@ -300,7 +300,6 @@
 			isa = PBXGroup;
 			children = (
 				4F75BEAB29C5CAD400C1F12E /* Assets.xcassets */,
-				4F75BEB029C5CAD400C1F12E /* PhotoPicker.entitlements */,
 				4F75BEC729C5CC2700C1F12E /* com.pookjw.PhotoPicker.Extension.appextensionpoint */,
 			);
 			path = Resources;
@@ -322,6 +321,7 @@
 			isa = PBXGroup;
 			children = (
 				4F4E4FC229C960EE0046FF10 /* PhotoPicker-Bridging-Header.h */,
+				4F75BEB029C5CAD400C1F12E /* PhotoPicker.entitlements */,
 				4F75BEA729C5CAD300C1F12E /* PhotoPickerApp.swift */,
 			);
 			path = Application;
@@ -675,7 +675,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = PhotoPicker/Resources/PhotoPicker.entitlements;
+				CODE_SIGN_ENTITLEMENTS = PhotoPicker/Application/PhotoPicker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -685,6 +685,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = Hello;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -705,7 +706,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = PhotoPicker/Resources/PhotoPicker.entitlements;
+				CODE_SIGN_ENTITLEMENTS = PhotoPicker/Application/PhotoPicker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -715,6 +716,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = Hello;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -741,6 +743,7 @@
 				INFOPLIST_FILE = PhotoPickerService/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = PhotoPickerService;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = Hello;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -771,6 +774,7 @@
 				INFOPLIST_FILE = PhotoPickerService/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = PhotoPickerService;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = Hello;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -802,6 +806,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = Hello;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -829,6 +834,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = Hello;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",

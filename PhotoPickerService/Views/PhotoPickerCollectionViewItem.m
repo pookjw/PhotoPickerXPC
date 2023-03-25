@@ -22,17 +22,44 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.wantsLayer = YES;
+    [self setupImageView];
 }
 
 - (void)configureWithAsset:(PHAsset *)asset {
-    CGFloat red = rand() / (CGFloat)RAND_MAX;
-    CGFloat green = rand() / (CGFloat)RAND_MAX;
-    CGFloat blue = rand() / (CGFloat)RAND_MAX;
+    PHImageRequestOptions *options = [PHImageRequestOptions new];
+    options.synchronous = NO;
+    options.deliveryMode = PHImageRequestOptionsDeliveryModeHighQualityFormat;
+    options.resizeMode = PHImageRequestOptionsResizeModeFast;
+    options.networkAccessAllowed = YES;
     
-    CGColorRef color = CGColorCreateSRGB(red, green, blue, 1.f);
-    self.view.layer.backgroundColor = color;
-    CGColorRelease(color);
+    // TODO: Cancelling
+    [PHImageManager.defaultManager requestImageForAsset:asset
+                                             targetSize:CGSizeMake(asset.pixelWidth, asset.pixelHeight)
+                                            contentMode:PHImageContentModeAspectFit
+                                                options:options
+                                          resultHandler:^(NSImage * _Nullable result, NSDictionary * _Nullable info) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.imageView.image = result;
+        });
+    }];
+    
+    [options release];
+}
+
+- (void)setupImageView {
+    NSImageView *imageView = [[NSImageView alloc] initWithFrame:self.view.bounds];
+    imageView.translatesAutoresizingMaskIntoConstraints = NO;
+    
+    [self.view addSubview:imageView];
+    [NSLayoutConstraint activateConstraints:@[
+        [imageView.topAnchor constraintEqualToAnchor:self.view.topAnchor],
+        [imageView.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor],
+        [imageView.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor],
+        [imageView.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor]
+    ]];
+    
+    self.imageView = imageView;
+    [imageView release];
 }
 
 @end
